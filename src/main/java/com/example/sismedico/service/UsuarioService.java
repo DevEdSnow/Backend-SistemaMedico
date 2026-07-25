@@ -399,5 +399,14 @@ public Usuario verificarEmail(Long id) {
     return usuarioRepository.save(usuario);
 
 }
+public Usuario actualizarTokenFirebase(Long id, String token) {
+
+    Usuario usuario = obtenerPorId(id);
+
+    usuario.setTokenFirebase(token);
+
+    return usuarioRepository.save(usuario);
+
+}
 
 }
