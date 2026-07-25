@@ -382,4 +382,22 @@ public class UsuarioService {
 
     }
 
+
+
+    public List<Usuario> listarActivos() {
+
+    return usuarioRepository.findByActivoTrue();
+
+}
+
+public Usuario verificarEmail(Long id) {
+
+    Usuario usuario = obtenerPorId(id);
+
+    usuario.setEmailVerificado(true);
+
+    return usuarioRepository.save(usuario);
+
+}
+
 }
