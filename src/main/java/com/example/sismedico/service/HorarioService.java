@@ -125,4 +125,37 @@ public class HorarioService {
 
     }
 
-    
+        /**
+     * Eliminar horario
+     */
+    public void eliminarHorario(Long id) {
+
+        Horario horario = horarioRepository.findById(id)
+                .orElseThrow(() ->
+                        new RuntimeException("Horario no encontrado."));
+
+        horarioRepository.delete(horario);
+
+    }
+
+    /**
+     * Contar horarios registrados
+     */
+    @Transactional
+    public Long contarHorarios() {
+
+        return horarioRepository.count();
+
+    }
+
+    /**
+     * Verificar si existe un horario
+     */
+    @Transactional
+    public Boolean existeHorario(Long id) {
+
+        return horarioRepository.existsById(id);
+
+    }
+
+}
