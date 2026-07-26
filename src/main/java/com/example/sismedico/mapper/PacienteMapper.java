@@ -47,13 +47,15 @@ public class PacienteMapper {
                                 : null
                 )
 
+                .curp(paciente.getCurp())
+                .numeroSeguroSocial(paciente.getNumeroSeguroSocial())
                 .fechaNacimiento(paciente.getFechaNacimiento())
                 .tipoSangre(paciente.getTipoSangre())
                 .altura(paciente.getAltura())
                 .peso(paciente.getPeso())
                 .alergias(paciente.getAlergias())
                 .enfermedadesCronicas(paciente.getEnfermedadesCronicas())
-                .medicamentosActuales(paciente.getMedicamentos())
+                .medicamentosActuales(paciente.getMedicamentosActuales())
                 .contactoEmergencia(paciente.getContactoEmergencia())
                 .telefonoEmergencia(paciente.getTelefonoEmergencia())
                 .activo(paciente.getActivo())
