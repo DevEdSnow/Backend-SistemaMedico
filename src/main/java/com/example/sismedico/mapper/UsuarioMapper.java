@@ -6,7 +6,6 @@ import com.example.sismedico.entity.Usuario;
 public class UsuarioMapper {
 
     private UsuarioMapper() {
-        // Evita instancias
     }
 
     public static UsuarioResponse toResponse(Usuario usuario) {
@@ -23,7 +22,7 @@ public class UsuarioMapper {
                 .correo(usuario.getCorreo())
                 .telefono(usuario.getTelefono())
                 .direccion(usuario.getDireccion())
-                .fotoPerfil(usuario.getFotoPerfil())
+                .foto(usuario.getFoto())
                 .genero(usuario.getGenero())
                 .fechaNacimiento(usuario.getFechaNacimiento())
 
